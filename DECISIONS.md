@@ -1,0 +1,6 @@
+- ReactBits is a copy-paste gallery, not an installable package. Animated buttons, marquees, and counters are implemented with Framer Motion and CSS.
+- Auth.js sessions use the JWT strategy so middleware can run on the Edge. User, account, and reset records still live in Turso/libSQL.
+- Without `RAZORPAY_KEY_ID`, checkout creates a demo order id and the success path confirms it through the same signature verifier used by the webhook.
+- Email verification and password-reset mail are stubbed until `RESEND_API_KEY` is set. The forgot-password route returns a dev token locally.
+- The database defaults to `file:local.db` when `TURSO_DATABASE_URL` is unset so the app runs before a hosted Turso database exists.
+- Stripe is implemented behind the payment provider interface as a demo adapter until `STRIPE_SECRET_KEY` is configured.
